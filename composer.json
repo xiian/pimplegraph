@@ -1,0 +1,17 @@
+{
+    "name": "xiian/pimplegraph",
+    "description": "Generate dependency graph for Pimple containers.",
+    "require-dev": {
+        "pimple/pimple": "dev-master"
+    },
+    "authors": [
+        {
+            "name": "Tom Sartain",
+            "email": "tomsartain@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "classmap": ["pimplegraph.php"]
+    }
+}
