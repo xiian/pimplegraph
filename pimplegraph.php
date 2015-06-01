@@ -18,7 +18,10 @@ class PimpleGraph
 
             $ref = new \ReflectionFunction($raw);
             $this->tokens = $this->getFunctionDeclarationTokens($ref->getFileName(), $ref->getStartLine(), $ref->getEndLine());
-            $this->dependencies[$key] = $this->extractDependencies('$' . $ref->getParameters()[0]->getName());
+            $parameters = $ref->getParameters();
+            if (count($parameters)) {
+                $this->dependencies[$key] = $this->extractDependencies('$' . $parameters[0]->getName());
+            }
         }
     }
 
